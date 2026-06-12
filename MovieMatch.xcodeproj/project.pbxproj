@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6012CC6CF36F293F1507E6E1 /* Pods_MovieMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736A0F6D3C7701CADD7A89F /* Pods_MovieMatch.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		37A088D32FDB2FD100260918 /* MovieMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6736A0F6D3C7701CADD7A89F /* Pods_MovieMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EABBFFE66F1FAE6F21339A6 /* Pods-MovieMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieMatch.debug.xcconfig"; path = "Target Support Files/Pods-MovieMatch/Pods-MovieMatch.debug.xcconfig"; sourceTree = "<group>"; };
+		AD6C974BA7F0B41AD74595F1 /* Pods-MovieMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieMatch.release.xcconfig"; path = "Target Support Files/Pods-MovieMatch/Pods-MovieMatch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6012CC6CF36F293F1507E6E1 /* Pods_MovieMatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				37A088D52FDB2FD100260918 /* MovieMatch */,
 				37A088D42FDB2FD100260918 /* Products */,
+				52223F52BAC329B0872FB47D /* Pods */,
+				5699075426B1CC4AF9E564E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		52223F52BAC329B0872FB47D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EABBFFE66F1FAE6F21339A6 /* Pods-MovieMatch.debug.xcconfig */,
+				AD6C974BA7F0B41AD74595F1 /* Pods-MovieMatch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5699075426B1CC4AF9E564E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6736A0F6D3C7701CADD7A89F /* Pods_MovieMatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37A088E62FDB2FD300260918 /* Build configuration list for PBXNativeTarget "MovieMatch" */;
 			buildPhases = (
+				056EE0C54E116BDE1A1CD47C /* [CP] Check Pods Manifest.lock */,
 				37A088CF2FDB2FD100260918 /* Sources */,
 				37A088D02FDB2FD100260918 /* Frameworks */,
 				37A088D12FDB2FD100260918 /* Resources */,
+				CF479FE92B06EC468466F476 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				37A088D52FDB2FD100260918 /* MovieMatch */,
 			);
 			name = MovieMatch;
-			packageProductDependencies = (
-			);
 			productName = MovieMatch;
 			productReference = 37A088D32FDB2FD100260918 /* MovieMatch.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		056EE0C54E116BDE1A1CD47C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieMatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF479FE92B06EC468466F476 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieMatch/Pods-MovieMatch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieMatch/Pods-MovieMatch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieMatch/Pods-MovieMatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37A088CF2FDB2FD100260918 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,12 +213,13 @@
 /* Begin XCBuildConfiguration section */
 		37A088E72FDB2FD300260918 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EABBFFE66F1FAE6F21339A6 /* Pods-MovieMatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2RHXBRCF87;
+				DEVELOPMENT_TEAM = LNJ9UQR5QL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieMatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -172,12 +246,13 @@
 		};
 		37A088E82FDB2FD300260918 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6C974BA7F0B41AD74595F1 /* Pods-MovieMatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2RHXBRCF87;
+				DEVELOPMENT_TEAM = LNJ9UQR5QL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieMatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -240,7 +315,7 @@
 				DEVELOPMENT_TEAM = 2RHXBRCF87;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -304,7 +379,7 @@
 				DEVELOPMENT_TEAM = 2RHXBRCF87;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

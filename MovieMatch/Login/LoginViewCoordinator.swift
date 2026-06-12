@@ -24,7 +24,6 @@ class LoginCoordinatorImpl: LoginCoordinator {
     }
     
     func start() {
-        let viewModelLogin = factory.makeLoginViewModel()
         let viewControllerLogin = factory.makeLoginViewController(coordinator: self)
         navigationController.pushViewController(viewControllerLogin, animated: true)
     }

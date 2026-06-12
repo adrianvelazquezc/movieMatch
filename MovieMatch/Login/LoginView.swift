@@ -42,6 +42,6 @@ extension LoginViewController: LoginViewDelegate {
 
 extension LoginViewController: LoginUIViewDelegate {
     func notifyUserAndPassword(name: String, password: String) {
-        
+        viewModel.loginTapped(username: name, password: password)
     }
 }
